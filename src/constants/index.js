@@ -2,7 +2,7 @@ const base_url = "https://api.edamam.com/search";
 const api_id = "db3ffb2c";
 const api_key = "fff8f1209b7c2ff7f44925980dfcab33";
 //this is all written and explained in the api documentation
-export const getApiUrl = (query) => `${base_url}?=${query}&app_id={ api_id }&app_key=${api_key}`;
+export const getApiUrl = (query) => `${base_url}?q=${query}&app_id=${api_id}&app_key=${api_key}`;
 
 export const predefinedFoodDishes = [
   { _id: 1, title: "Eggs", selected: false },

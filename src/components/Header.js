@@ -5,9 +5,9 @@ import logo from "../assets/img/logo.png";
 const Header = () => (
   <AppBar position="sticky">
     <Toolbar>
-      <img src={logo} alt="logo" width="32" height="35">
+      <img src={logo} alt="logo" width="32" height="32"></img>
         &nbsp;&nbsp;
-      </img>
+      
       <h1>Nutritional App</h1>
     </Toolbar>
   </AppBar>

@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import Grid from "@mui/material";
+import { Grid } from "@mui/material";
 import AnyFoodDishes from "./AnyFoodDishes";
 import PredefinedFoodDishes from "./PredefinedFoodDishes";
 import FoodDishes from "./FoodDishes";
@@ -21,13 +21,13 @@ const SearchFoodDishes = () => {
   return (
     <Fragment>
       <div className="root">
-        <Grid>
-          <AnyFoodDishes />
-          <PredefinedFoodDishes />
+        <Grid container direction="column" spaicing={3} justify="center">
+          <AnyFoodDishes getData={getData} />
+          <PredefinedFoodDishes getData={getData} setHits={setHits} />
         </Grid>
       </div>
 
-      {hits && <FoodDishes />}
+      {hits && <FoodDishes hits={hits} />}
     </Fragment>
   );
 };
